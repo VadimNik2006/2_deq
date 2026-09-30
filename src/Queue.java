@@ -1,7 +1,7 @@
 class Queue {
     private final static int DEFSIZE = 16;
-    private int[] array;
-    private int size, head, tail;
+    protected int[] array;
+    protected int size, head, tail;
     public Queue(int capacity) {
         array = new int[capacity];
         clear();
@@ -19,7 +19,7 @@ class Queue {
         tail = array.length - 1;
     }
     //Вернуть индекс следующего за данным элемента.
-    private int forward(int index) {
+    protected int forward(int index) {
         return ++index < array.length ? index : 0;
     }
     //Добавить число в очередь (в конец).
